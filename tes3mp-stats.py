@@ -18,7 +18,7 @@ def getstats(entrypoint):
     return stats
 
 
-# Appends data into a array.
+# Appends data into an array.
 def registercount(stats, array, prop):
     array.append(stats[prop])
 
