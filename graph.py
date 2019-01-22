@@ -26,7 +26,7 @@ def graph():
     plt.plot_date(date, servers, '-', label='Servers')
     plt.ylabel('Count')
     plt.xlabel('Time')
-    plt.title('TES3:MP - Player & Server Stats')
+    plt.title('TES3MP - Player & Server Stats')
     plt.grid(True)
     plt.gcf().autofmt_xdate()
     plt.legend()
