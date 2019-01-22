@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import requests
 import datetime
 
@@ -10,6 +9,7 @@ master_servers = [
 ]
 
 
+# Fetches states.
 def getstats(entrypoint):
     try:
         stats = requests.get(entrypoint, verify=False, timeout=15).json()
@@ -18,10 +18,13 @@ def getstats(entrypoint):
     return stats
 
 
+# Appends data.
 def registercount(stats, array, prop):
     array.append(stats[prop])
 
 
+# Main script. Fetches the data using "getstats", Appends the data using "registercount",
+# then writes the data into "stats.csv".
 def main():
     player_counts = []
     server_counts = []
