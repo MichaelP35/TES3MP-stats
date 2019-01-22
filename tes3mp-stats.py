@@ -29,7 +29,7 @@ def main():
     player_counts = []
     server_counts = []
     date_raw = datetime.datetime.utcnow()
-    date = '{d.year}-{d.month:02}-{d.day:02} {d.hour:02}:{d.minute:02}'.format(d=date_raw)
+    date = '{d.year}-{d.day:02}-{d.month:02} {d.hour:02}:{d.minute:02}'.format(d=date_raw)
 
     for entrypoint in master_servers:
         stats = getstats(entrypoint)

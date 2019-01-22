@@ -20,7 +20,7 @@ def graph():
     date, servers, players = np.loadtxt('stats.csv',
                                         delimiter=',',
                                         unpack=True,
-                                        converters={0: date2num('%Y-%m-%d %H:%M')})
+                                        converters={0: date2num('%Y-%d-%m %H:%M')})
 
     plt.plot_date(date, players, '-', label='Players')
     plt.plot_date(date, servers, '-', label='Servers')
