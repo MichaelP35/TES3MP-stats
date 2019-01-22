@@ -9,7 +9,7 @@ master_servers = [
 ]
 
 
-# Fetches states.
+# Fetches stats.
 def getstats(entrypoint):
     try:
         stats = requests.get(entrypoint, verify=False, timeout=15).json()
@@ -18,7 +18,7 @@ def getstats(entrypoint):
     return stats
 
 
-# Appends data.
+# Appends data into a array.
 def registercount(stats, array, prop):
     array.append(stats[prop])
 
